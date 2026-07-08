@@ -1,4 +1,6 @@
 import os
+import platform
+import shutil
 import subprocess
 import sys
 from urllib.parse import urlparse
@@ -6,13 +8,23 @@ from urllib.parse import urlparse
 
 def find_yt_dlp_executable():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    candidates = [
-        os.path.join(script_dir, "yt-dlp.exe"),
-        os.path.join(script_dir, "yt-dlp"),
-    ]
-    for candidate in candidates:
-        if os.path.exists(candidate):
+    system = platform.system()
+    if system == "Windows":
+        local_names = ["yt-dlp.exe", "yt-dlp"]
+        path_name = "yt-dlp.exe"
+    else:
+        local_names = ["yt-dlp", "yt-dlp-linux", "yt-dlp-macos"]
+        path_name = "yt-dlp"
+
+    for name in local_names:
+        candidate = os.path.join(script_dir, name)
+        if os.path.isfile(candidate) and os.access(candidate, os.X_OK):
             return candidate
+
+    path_candidate = shutil.which(path_name)
+    if path_candidate:
+        return path_candidate
+
     return None
 
 

@@ -22,9 +22,12 @@ That is the entire workflow. No need to write a full `yt-dlp` command yourself.
 
 ## Notes
 
-- The bundled `yt-dlp.exe` must stay in the same folder as `dl-link.py`.
+- Download the latest `yt-dlp` binary from the official releases page:
+  https://github.com/yt-dlp/yt-dlp/releases
+- On Windows, place `yt-dlp.exe` in the same folder as `dl-link.py`.
+- On Linux/macOS, place the corresponding `yt-dlp` binary for your OS in the same folder or install `yt-dlp` system-wide.
 - Downloads are saved into the `output/` directory.
-- The script always converts the downloaded video to MP4, instead of leaving it in the format yt-dlp would normally choose, making it easier to use in video editing software.
+- The script converts the downloaded video to MP4 format.
 
 ## Purpose
 
