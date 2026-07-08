@@ -1,6 +1,7 @@
 # YT-DLP EasyMode
 
-A tiny helper project whose only purpose is to make using `yt-dlp` easier.
+A tiny helper project whose only purpose is to make using `yt-dlp` easier.  I made this because when I want to use a YouTube video in one of my own video projects,
+such as a free Green Screen video, I'm too lazy to manually put together the full yt-dlp command.  Lol.
 
 ## What this does
 
@@ -28,7 +29,3 @@ That is the entire workflow. No need to write a full `yt-dlp` command yourself.
 - On Linux/macOS, place the corresponding `yt-dlp` binary for your OS in the same folder or install `yt-dlp` system-wide.
 - Downloads are saved into the `output/` directory.
 - The script converts the downloaded video to MP4 format.
-
-## Purpose
-
-This project exists only to avoid manually constructing a `yt-dlp` command. It wraps the executable in a simple prompt-driven Python script so you can download a single YouTube video with minimal effort.
