@@ -27,5 +27,7 @@ That is the entire workflow. No need to write a full `yt-dlp` command yourself.
   https://github.com/yt-dlp/yt-dlp/releases
 - On Windows, place `yt-dlp.exe` in the same folder as `dl-link.py`.
 - On Linux/macOS, place the corresponding `yt-dlp` binary for your OS in the same folder or install `yt-dlp` system-wide.
+- `deno` is recommended for full YouTube support, as noted by yt-dlp's own README. It is not strictly required, but using Deno helps avoid extraction failures.
+  https://docs.deno.com/runtime/
 - Downloads are saved into the `output/` directory.
 - The script converts the downloaded video to MP4 format.
