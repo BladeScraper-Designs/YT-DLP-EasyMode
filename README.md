@@ -24,7 +24,7 @@ That is the entire workflow. No need to write a full `yt-dlp` command yourself.
 
 - The bundled `yt-dlp.exe` must stay in the same folder as `dl-link.py`.
 - Downloads are saved into the `output/` directory.
-- The script forces MP4 output so you don’t end up with WebM files.
+- The script always converts the downloaded video to MP4, instead of leaving it in the format yt-dlp would normally choose, making it easier to use in video editing software.
 
 ## Purpose
 
